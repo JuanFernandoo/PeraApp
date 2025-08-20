@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">PeraAppNew</string>
+    <string name="peraapp">PeraApp</string>
+    <string name="description_start">Inicia una nueva aventura con PeraApp y descubre una nueva forma de ver el mundo</string>
+    <string name="comienza_button">Comienza</string>
+    <string name="juanfe">Juanfe</string>
+    <string name="registrate">Registrate</string>
+    <string name="login_description">La aventura está por iniciar, por favor inicia sesión</string>
+    <string name="ingresar">Ingresar</string>
+    <string name="ingresar_con_google">Ingresar con Google</string>
+    <string name="no_tienes_cuenta">No tienes cuenta?</string>
+</resources>
