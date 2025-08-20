@@ -36,7 +36,7 @@
         app:layout_constraintVertical_bias="0.098" />
 
     <TextView
-        android:id="@+id/descripriotLogin"
+        android:id="@+id/descriptionsignup"
         android:layout_width="297dp"
         android:layout_height="69dp"
         android:text="@string/login_description"
@@ -54,7 +54,7 @@
         android:id="@+id/resetpassword"
         android:layout_width="297dp"
         android:layout_height="39dp"
-        android:text="Recuperar Tu Contraseña"
+        android:text="@string/recuperar_tu_contrase_a"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="20sp"
@@ -81,7 +81,7 @@
         app:layout_constraintVertical_bias="0.965" />
 
     <Button
-        android:id="@+id/buttonlogin"
+        android:id="@+id/buttonSignup"
         android:layout_width="249dp"
         android:layout_height="69dp"
         android:backgroundTint="@color/white"
@@ -134,7 +134,7 @@
         app:layout_constraintVertical_bias="0.954" />
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/nameText"
         android:layout_width="249dp"
         android:layout_height="47dp"
         android:layout_margin="16dp"

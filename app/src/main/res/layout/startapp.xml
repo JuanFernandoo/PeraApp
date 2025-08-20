@@ -35,7 +35,7 @@
         app:layout_constraintVertical_bias="0.446" />
 
     <TextView
-        android:id="@+id/descripriotLogin"
+        android:id="@+id/descriptionsignup"
         android:layout_width="324dp"
         android:layout_height="112dp"
         android:text="TextView"
@@ -51,7 +51,7 @@
         tools:text="@string/description_start" />
 
     <Button
-        android:id="@+id/buttonlogin"
+        android:id="@+id/buttonSignup"
         android:layout_width="190dp"
         android:layout_height="70dp"
         android:backgroundTint="@color/white"
