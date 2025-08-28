@@ -19,6 +19,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".StartAppActivity" android:exported="false"/>
+            <activity android:name=".LoginActivity" android:exported="false"/>
+            <activity android:name=".SignUpActivity" android:exported="false"/>
+            <activity android:name=".UpdateUserActivity" android:exported="false"/>
+            <activity android:name=".ResetActivity" android:exported="false"/>
         <activity
             android:name=".MainActivity"
             android:exported="false">
