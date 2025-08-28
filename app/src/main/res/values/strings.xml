@@ -11,7 +11,7 @@
     <string name="no_tienes_cuenta">No tienes cuenta?</string>
     <string name="recuperar_tu_contrase_a">Recuperar Tu Contraseña</string>
     <string name="descriptionsignup">Registrate para poder disfrutar de esta nueva aventura</string>
-    <string name="termconditions">Al utilizar esta aplicación, aceptas nuestros Términos y Condiciones. No uses la app mientras conduces si interfiere con tu atención o seguridad. Consulta los términos completos en nuestro sitio web.</string>
+    <string name="termconditions">Al utilizar esta aplicación, aceptas nuestros Términos y Condiciones. Consulta los términos completos en nuestro sitio web.</string>
     <string name="nombre">Nombre</string>
     <string name="apellido">Apellidos</string>
     <string name="e_mail">E-mail</string>
@@ -34,6 +34,6 @@
     <string name="emailuseredit">jfernandoorjuela@ucompensar.edu.co</string>
     <string name="phoneedituser">3135032150</string>
     <string name="updatedata">Actualizar datos</string>
-    <string name="registerwithgoogle">Registrate con google</string>
+    <string name="registerwithgoogle">Registrate</string>
     <string name="editpersonaldata">Editar información personal</string>
 </resources>
