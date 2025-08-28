@@ -49,8 +49,9 @@
 
         <EditText
             android:id="@+id/nameText"
-            android:layout_width="0dp"
-            android:layout_height="55dp"
+
+            android:layout_width="310dp"
+            android:layout_height="45dp"
             android:background="@drawable/edittext_background"
             android:hint="@string/nombreplaceholder"
             android:inputType="textPersonName"
@@ -65,8 +66,9 @@
 
         <EditText
             android:id="@+id/lastname"
-            android:layout_width="0dp"
-            android:layout_height="55dp"
+
+            android:layout_width="310dp"
+            android:layout_height="45dp"
             android:background="@drawable/edittext_background"
             android:hint="@string/apellidosplaceholder"
             android:inputType="textPersonName"
@@ -81,8 +83,9 @@
 
         <EditText
             android:id="@+id/emailText"
-            android:layout_width="0dp"
-            android:layout_height="55dp"
+
+            android:layout_width="310dp"
+            android:layout_height="45dp"
             android:background="@drawable/edittext_background"
             android:hint="@string/emailplaceholder"
             android:inputType="textEmailAddress"
@@ -97,8 +100,9 @@
 
         <EditText
             android:id="@+id/phone"
-            android:layout_width="0dp"
-            android:layout_height="55dp"
+
+            android:layout_width="310dp"
+            android:layout_height="45dp"
             android:background="@drawable/edittext_background"
             android:hint="@string/telefonoplaceholder"
             android:inputType="phone"
@@ -113,8 +117,9 @@
 
         <EditText
             android:id="@+id/passwordsignup"
-            android:layout_width="0dp"
-            android:layout_height="55dp"
+
+            android:layout_width="310dp"
+            android:layout_height="45dp"
             android:background="@drawable/edittext_background"
             android:hint="@string/contrasenaplaceholder"
             android:inputType="textPassword"
@@ -129,8 +134,9 @@
 
         <EditText
             android:id="@+id/confirmpassword"
-            android:layout_width="0dp"
-            android:layout_height="55dp"
+
+            android:layout_width="310dp"
+            android:layout_height="45dp"
             android:background="@drawable/edittext_background"
             android:hint="@string/confirmarcontrasenaplaceholder"
             android:inputType="textPassword"
@@ -145,8 +151,9 @@
 
         <CheckBox
             android:id="@+id/termconditions"
-            android:layout_width="0dp"
-            android:layout_height="55dp"
+
+            android:layout_width="310dp"
+            android:layout_height="45dp"
             android:text="@string/termconditions"
             android:textSize="10sp"
             android:textStyle="italic"
@@ -159,8 +166,9 @@
 
         <Button
             android:id="@+id/buttonSignup"
-            android:layout_width="0dp"
-            android:layout_height="55dp"
+
+            android:layout_width="310dp"
+            android:layout_height="45dp"
             android:backgroundTint="@color/white"
             android:text="@string/registrate"
             android:textColor="@color/darkBlue"
@@ -172,25 +180,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="20dp"
             android:layout_marginStart="55dp"
-            android:layout_marginEnd="55dp"/>
+            android:layout_marginEnd="50dp"/>
 
-        <Button
-            android:id="@+id/buttongoogle"
-            android:layout_width="0dp"
-            android:layout_height="55dp"
-            android:backgroundTint="@color/white"
-            android:text="@string/registerwithgoogle"
-            android:textColor="@color/black"
-            android:textSize="15sp"
-            android:textStyle="bold"
-            app:icon="@drawable/googleicon"
-            app:iconSize="16dp"
-            app:iconTint="@android:color/transparent"
-            app:layout_constraintTop_toBottomOf="@id/buttonSignup"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginTop="12dp"
-            android:layout_marginStart="55dp"
-            android:layout_marginEnd="55dp"/>
+       
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
