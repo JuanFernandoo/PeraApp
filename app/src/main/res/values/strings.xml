@@ -36,4 +36,6 @@
     <string name="updatedata">Actualizar datos</string>
     <string name="registerwithgoogle">Registrate</string>
     <string name="editpersonaldata">Editar información personal</string>
+    <string name="contrase_aPlaceHolder">Contraseña</string>
+    <string name="usuarioPlaceHolder">Usuario</string>
 </resources>
