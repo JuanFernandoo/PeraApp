@@ -12,17 +12,22 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class LoginActivity extends AppCompatActivity {
+    private EditText etEmail, etPassword;
+    private Button buttonIngresar;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login);
 
-        Button buttonIngresar = findViewById(R.id.buttonSignup);
+        etEmail = findViewById(R.id.editTextEmail);
+        etPassword = findViewById(R.id.password);
+        Button buttonIngresar = findViewById(R.id.buttonLogin);
         buttonIngresar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent updateIntent = new Intent(LoginActivity.this, UpdateUserActivity.class);
-                startActivity(updateIntent);
+                shredPreferencesLogin(etEmail, etPassword);
             }
         });
 
@@ -30,7 +35,8 @@ public class LoginActivity extends AppCompatActivity {
         resetPasswordText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent resetIntent = new Intent(LoginActivity.this, ResetActivity.class);                startActivity(resetIntent);
+                Intent resetIntent = new Intent(LoginActivity.this, ResetActivity.class);
+                startActivity(resetIntent);
             }
         });
 
@@ -46,6 +52,18 @@ public class LoginActivity extends AppCompatActivity {
     private void shredPreferencesLogin(EditText etEmail, EditText etPassword) {
         String email = etEmail.getText().toString();
         String password = etPassword.getText().toString();
+
+        if (email.isEmpty()) {
+            etEmail.setError("El correo es obligatorio");
+            etEmail.requestFocus();
+            return;
+        }
+
+        if (password.isEmpty()) {
+            etPassword.setError("La contraseña es obligatoria");
+            etPassword.requestFocus();
+            return;
+        }
 
         SharedPreferences sharedPreferences = getSharedPreferences("UserData", MODE_PRIVATE);
 

@@ -3,10 +3,10 @@ package com.example.peraappnew;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.view.View; // Import View
-import android.widget.Button; // Import Button
-import android.widget.CheckBox; // Import CheckBox
-import android.widget.EditText; // Import EditText
+import android.view.View;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -110,6 +110,13 @@ public class SignUpActivity extends AppCompatActivity {
             return false;
         }
 
+        if (!password.equals(confirmPassword)) {
+            etConfirmPassword.setError("Las contraseñas no coinciden");
+            etConfirmPassword.requestFocus();
+            Toast.makeText(this, "Las contraseñas no coinciden", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+
         if (!termsAccepted) {
             Toast.makeText(this, "Debe aceptar los términos y condiciones", Toast.LENGTH_SHORT).show();
             return false;
@@ -124,5 +131,6 @@ public class SignUpActivity extends AppCompatActivity {
         editor.putString("email", email);
         editor.putString("phone", phone);
         editor.putString("password", password);
+        editor.apply();
     }
 }
