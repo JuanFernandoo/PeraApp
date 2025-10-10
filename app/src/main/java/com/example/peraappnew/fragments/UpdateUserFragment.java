@@ -1,35 +1,43 @@
-package com.example.peraappnew;
+package com.example.peraappnew.fragments;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.widget.TextView;
-import android.widget.Toast;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.content.SharedPreferences;
-import androidx.appcompat.app.AppCompatActivity;
+import android.widget.TextView;
+import android.widget.Toast;
 
-public class UpdateUserActivity extends AppCompatActivity {
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+
+import com.example.peraappnew.R;
+
+public class UpdateUserFragment extends Fragment {
 
     private SharedPreferences sharedPreferences;
     private EditText etName, etLastName, etEmail, etPhone;
     private Button btnUpdate;
     private TextView upNameUser;
 
-
-
+    @Nullable
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.updateuser);
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        sharedPreferences = getSharedPreferences("UserData", MODE_PRIVATE);
+        View view = inflater.inflate(R.layout.updateuser, container, false);
 
-        etName = findViewById(R.id.editnamelabel);
-        etLastName = findViewById(R.id.editnamelabel5);
-        etEmail = findViewById(R.id.editnamelabel3);
-        etPhone = findViewById(R.id.editnamelabel6);
-        btnUpdate = findViewById(R.id.buttonUpdate);
-        upNameUser = findViewById(R.id.nameuser);
+        sharedPreferences = requireActivity().getSharedPreferences("UserData", Context.MODE_PRIVATE);
+
+        etName = view.findViewById(R.id.editnamelabel);
+        etLastName = view.findViewById(R.id.editnamelabel5);
+        etEmail = view.findViewById(R.id.editnamelabel3);
+        etPhone = view.findViewById(R.id.editnamelabel6);
+        btnUpdate = view.findViewById(R.id.buttonUpdate);
+        upNameUser = view.findViewById(R.id.nameuser);
 
         etName.setText(sharedPreferences.getString("name", ""));
         etLastName.setText(sharedPreferences.getString("lastName", ""));
@@ -44,7 +52,7 @@ public class UpdateUserActivity extends AppCompatActivity {
             String email = etEmail.getText().toString().trim();
             String phone = etPhone.getText().toString().trim();
 
-            if (validateFields(name, lastName, email, phone)){
+            if (validateFields(name, lastName, email, phone)) {
                 SharedPreferences.Editor editor = sharedPreferences.edit();
                 editor.putString("name", name);
                 editor.putString("lastName", lastName);
@@ -54,11 +62,14 @@ public class UpdateUserActivity extends AppCompatActivity {
 
                 upNameUser.setText(name + " " + lastName);
 
-                Toast.makeText(this, "Datos actualizados", Toast.LENGTH_SHORT).show();
+                Toast.makeText(requireContext(), "Datos actualizados", Toast.LENGTH_SHORT).show();
             }
         });
+
+        return view;
     }
-    private boolean validateFields(String name, String lastName, String email, String phone){
+
+    private boolean validateFields(String name, String lastName, String email, String phone) {
         if (name.isEmpty()) {
             etName.setError("El nombre es requerido");
             etName.requestFocus();
@@ -78,10 +89,10 @@ public class UpdateUserActivity extends AppCompatActivity {
         }
 
         if (phone.isEmpty()) {
-            etPhone.setError("El telefono es reuqrido");
+            etPhone.setError("El teléfono es requerido");
             etPhone.requestFocus();
             return false;
         }
-        return  true;
+        return true;
     }
 }

@@ -1,9 +1,11 @@
-package com.example.peraappnew;
+package com.example.peraappnew.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.peraappnew.R;
 
 public class SplashActivity extends AppCompatActivity {
 

@@ -150,7 +150,6 @@
 
         <CheckBox
             android:id="@+id/termconditions"
-
             android:layout_width="310dp"
             android:layout_height="45dp"
             android:text="@string/termconditions"

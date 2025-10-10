@@ -1,8 +1,10 @@
-package com.example.peraappnew;
+package com.example.peraappnew.activities;
 
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.peraappnew.R;
 
 public class ResetActivity extends AppCompatActivity {
     @Override
